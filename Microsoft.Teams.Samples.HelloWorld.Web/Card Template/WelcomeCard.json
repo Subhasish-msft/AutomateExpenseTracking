@@ -1,0 +1,135 @@
+﻿{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "Container",
+            "style": "emphasis",
+            "items": [
+              {
+                "type": "ColumnSet",
+                "columns": [
+                  {
+                    "type": "Column",
+                    "items": [
+                      {
+                        "type": "TextBlock",
+                        "size": "Large",
+                        "weight": "Bolder",
+                        "text": "**Welcome to Automate Expense Tracking**"
+                      }
+                    ],
+                    "width": "stretch"
+                  },
+                  {
+                    "type": "Column",
+                    "items": [
+                      {
+                        "type": "ActionSet",
+                        "actions": [
+                          {
+                            "type": "Action.ShowCard",
+                            "title": "Upload as Excel",
+                            "card": {
+                              "type": "AdaptiveCard",
+                              "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "width": "stretch"
+                  }
+                ]
+              }
+            ],
+            "bleed": true
+        },
+        {
+            "type": "Container",
+            "style": "emphasis",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "horizontalAlignment": "Right",
+                                    "text": "Amount to be Reimbursed",
+                                    "wrap": true
+                                }
+                            ],
+                            "width": "stretch"
+                        },
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "weight": "Bolder",
+                                    "text": "$ 00.00"
+                                }
+                            ],
+                            "width": "auto"
+                        },
+                        {
+                            "type": "Column",
+                            "width": "auto"
+                        }
+                    ]
+                }
+            ],
+            "bleed": true
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.Submit",
+                            "title": "Create",
+                            "style": "positive",
+                            "data": {
+                                "id": "_qkQW8dJlUeLVi7ZMEzYVw",
+                                "action": "approve"
+                            }
+                        },
+                        {
+                            "type": "Action.ShowCard",
+                            "title": "Edit",
+                            "style": "positive",
+                            "card": {
+                                "type": "AdaptiveCard",
+                                "body": [
+                                    {
+                                        "type": "Input.Text",
+                                        "id": "RejectCommentID",
+                                        "placeholder": "Please specify an appropriate reason for rejection.",
+                                        "isMultiline": true
+                                    }
+                                ],
+                                "actions": [
+                                    {
+                                        "type": "Action.Submit",
+                                        "title": "Send",
+                                        "data": {
+                                            "id": "_qkQW8dJlUeLVi7ZMEzYVw",
+                                            "action": "reject"
+                                        }
+                                    }
+                                ],
+                                "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.0"
+}
